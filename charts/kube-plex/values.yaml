@@ -3,13 +3,14 @@
 # Declare variables to be passed into your templates.
 image:
   repository: plexinc/pms-docker
-  tag: 1.16.0.1226-7eb2c8f6f
+  tag: 1.32.6.7557-1cf77d501
   pullPolicy: IfNotPresent
 
 kubePlex:
   enabled: true
   image:
     repository: quay.io/munnerz/kube-plex
+    #repository: docker.io/cerebus2/kube-plex-shim:0.0.0  
     tag: latest
     pullPolicy: Always
 
