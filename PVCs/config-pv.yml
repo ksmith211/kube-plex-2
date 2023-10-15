@@ -8,5 +8,3 @@ spec:
     storage: 20Gi
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    path: /home/meireles/Development/kube-plex/files

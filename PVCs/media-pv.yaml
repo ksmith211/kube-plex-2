@@ -5,9 +5,7 @@ metadata:
   namespace: plex
 spec:
   capacity:
-    storage: 10Gi
+    storage: 500Gi
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    path: /home/meireles/Development/kube-plex/files
 
