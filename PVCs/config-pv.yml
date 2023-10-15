@@ -8,3 +8,5 @@ spec:
     storage: 20Gi
   accessModes:
     - ReadWriteOnce
+  vsphereVolume:
+    volumePath: /plex-config

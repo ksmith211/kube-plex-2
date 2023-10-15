@@ -8,3 +8,5 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
+  vsphereVolume:
+    volumePath: /kubevols
