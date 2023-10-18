@@ -4,8 +4,10 @@ metadata:
   name: transcode-pvc
   namespace: plex
 spec:
+  storageClassName: vsphere-nashdd2
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi  # Match the storage capacity with your PV
+      storage: 20Gi  # Match the storage capacity with your PV
+

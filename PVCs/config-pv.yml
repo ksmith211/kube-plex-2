@@ -5,8 +5,12 @@ metadata:
   namespace: plex
 spec:
   capacity:
-    storage: 20Gi
+    storage: 500Gi
+  volumeMode: Filesystem
+  storageClassName: vsphere-nashdd2
   accessModes:
     - ReadWriteOnce
-  vsphereVolume:
-    volumePath: /plex-config
+  volumeMode: Filesystem
+  csi:
+    driver: csi.vsphere.vmware.com
+    volumeHandle: pvc-plexconfig

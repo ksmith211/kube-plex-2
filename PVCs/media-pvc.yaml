@@ -4,6 +4,7 @@ metadata:
   name: media-pvc
   namespace: plex
 spec:
+  storageClassName: vsphere-nashdd2
   accessModes:
     - ReadWriteOnce
   resources:
