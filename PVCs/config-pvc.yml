@@ -9,5 +9,5 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 500Gi  # Match the storage capacity with your PV
+      storage: 20Gi  # Match the storage capacity with your PV
 
