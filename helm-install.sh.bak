@@ -5,6 +5,6 @@ helm install plex ./charts/kube-plex \
     --set claimToken=claim-2HZnP_FPUtUnhD4DKsuV \
     --set persistence.data.claimName=media-pvc\
     --set persistence.config.claimName=config-pvc\
+    --set persistence.transcode.claimName=transcode-pvc\
     --set kubePlex.enabled=false\
-    --set ingress.enabled=false\
-    --set image.pullPolicy=IfNotPresent
+    --set ingress.enabled=false

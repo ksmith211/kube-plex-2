@@ -14,6 +14,16 @@ metadata:
     {{- end }}
   {{- end }}
 spec:
+  affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              - weight: 1
+                nodeSelectorTerms:
+                  - matchExpressions:
+                    - key: kubernetes.io/hostname
+                      operator: NotIn
+                      values:
+                        - k8s-kubespray-worker-1
   replicas: 1
   revisionHistoryLimit: 3
   strategy:
@@ -45,9 +55,18 @@ spec:
         - cp
         - /kube-plex
         - /shared/kube-plex
+        - cp /kube-plex /shared/kube-plex
+        - sh
+        - -c
+        - |
+          #!/bin/sh
+          set -e
+          apt-get update
+          apt-get add openssh rsync tmux
         volumeMounts:
         - name: shared
           mountPath: /shared
+    
 {{- end }}
       containers:
       - name: plex
