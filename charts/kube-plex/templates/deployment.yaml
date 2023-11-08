@@ -177,6 +177,18 @@ spec:
           mountPath: /shared
         resources:
 {{ toYaml .Values.resources | indent 10 }}
+      - name: filezilla
+        image: linuxserver/filezilla
+        env:
+        - name: PUID
+          value: "0"
+        - name: PGID
+          value: "0"
+        - name: TZ
+          value: "Etc/UTC"
+        volumeMounts:
+        - mountPath: /data  # Mount path for the media volume
+          name: data
     {{- if .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.nodeSelector | indent 8 }}
