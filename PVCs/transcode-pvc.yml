@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: transcode-pvc
+  name: transcode-pvc2
   namespace: plex
 spec:
-  storageClassName: vsphere-nashdd2
+  storageClassName: vsphere-ssd1
   accessModes:
     - ReadWriteOnce
   resources:

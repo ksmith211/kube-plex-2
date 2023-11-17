@@ -53,6 +53,27 @@ spec:
     - name: https
       port: 443
       targetPort: 32443
+    - name: filezilla
+      port: 3001
+      targetPort: 3001
+    - name: rutorrent
+      port: 8080
+      targetPort: 8080
+    - name: rutorrent2
+      port: 6881
+      targetPort: 6881
+    - name: rutorrent3
+      port: 8000
+      targetPort: 8000
+    - name: rutorrent4
+      port: 9000
+      targetPort: 9000
+    - name: rutorrent5
+      port: 50000
+      targetPort: 50000
+    - name: handbrake
+      port: 5800
+      targetPort: 5800
   selector:
     app: {{ template "name" . }}
     release: {{ .Release.Name }}

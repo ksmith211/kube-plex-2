@@ -64,14 +64,15 @@ rbac:
   ## serviceAccountName: ""
 
 nodeSelector:
-  beta.kubernetes.io/arch: amd64
+  #beta.kubernetes.io/arch: amd64
+  kubernetes.io/hostname: debian
 
 persistence:
   transcode:
     # Optionally specify claimName to manually override the PVC to be used for
     # the transcode directory. If claimName is specified, storageClass and size
     # are ignored.
-    ## claimName: "plex-transcode-pvc"
+    claimName: "transcode-pvc2"
     # Optionally specify a storage class to be used for the transcode directory.
     # If not specified and claimName is not specified, the default storage
     # class will be used.
@@ -126,11 +127,11 @@ resources: {}
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   # limits:
-  #  cpu: 100m
-  #  memory: 128Mi
+  #   cpu: 5000m
+  #   memory: 2000Mi
   # requests:
-  #  cpu: 100m
-  #  memory: 128Mi
+  #   cpu: 500m
+  #   memory: 600Mi
 
 podAnnotations: {}
 

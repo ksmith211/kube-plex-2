@@ -1,9 +1,9 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: vsphere-nashdd2
+  name: vsphere-nvme
 provisioner: kubernetes.io/vsphere-volume
 allowVolumeExpansion: true
 parameters:
-  datastore: NAS HDD Datastore 2 
+  datastore: NVMe Datastore
 
